@@ -1,0 +1,80 @@
+﻿<Window x:Class="WpfApplication4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="464.234" Width="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+        <DockPanel  Grid.Column="3" Grid.Row="0" Grid.RowSpan="3" >
+            <TextBox x:Name="textBox1" SelectionBrush="Blue" Margin="0,0,0,0.4" Text="Tоп самых быстрых игр:&#xD;&#xA;1 Mесто-0&#xD;&#xA;2 Место-0&#xD;&#xA;3 Место-0&#xD;&#xA;" />
+        </DockPanel>
+
+        <DockPanel  Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Margin="0.2,0,5.2,136.2">
+
+            <Button x:Name="button3"   Width="201" Content="Нажать" Click="button3_Click" />
+
+        </DockPanel>
+
+        <DockPanel Grid.Row="1" Margin="198,0.4,198.2,0.2" Grid.ColumnSpan="3">
+            <Button x:Name="button5" Width="201" Content="Нажать" Click="button5_Click"  />
+
+        </DockPanel>
+
+        <DockPanel Grid.Row="0" Grid.ColumnSpan="1">
+            <Button x:Name="button1" Width="201" Content="Нажать" Click="button1_Click" Height="146" Margin="0,0,0,-0.4" VerticalAlignment="Top"  />
+          
+        </DockPanel>
+
+
+        <DockPanel Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="2">
+            <Button x:Name="button9" Width="201" Content="Нажать" Click="button9_Click"  />
+
+        </DockPanel>
+
+        <DockPanel Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="2">
+            <Button x:Name="button6" Width="201" Content="Нажать" Click="button6_Click"  />
+
+        </DockPanel>
+        <DockPanel Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="0">
+            <Button x:Name="button4" Width="201" Content="Нажать" Click="button4_Click"   />
+
+        </DockPanel>
+
+
+        <DockPanel Grid.Row="0" Grid.ColumnSpan="1" Grid.Column="1">
+            <Button x:Name="button2" Width="201" Content="Нажать" Click="button2_Click"  />
+
+        </DockPanel>
+
+        <DockPanel Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="0">
+            <Button x:Name="button7" Width="201" Content="Нажать" Click="button7_Click"  />
+
+        </DockPanel>
+
+        <DockPanel Grid.Row="3" Grid.ColumnSpan="1" Grid.Column="1">
+            <Button x:Name="button8" Width="201" Content="Нажать" Click="button8_Click"  />
+
+        </DockPanel   >
+
+      
+
+
+    </Grid>
+</Window>

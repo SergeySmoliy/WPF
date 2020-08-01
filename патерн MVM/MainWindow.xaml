@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfApp16.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp16"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="g">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+          </Grid.ColumnDefinitions>
+
+        <Image Grid.Column="0" Grid.Row="0" Source="{Binding SelectedPhoto.Filepath}" >
+        </Image>
+        <ListBox Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Photos}" SelectedItem="{Binding SelectedPhoto}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Image Width="40" Height="40" Source="{Binding Path=Filepath}" />
+                        <TextBox Grid.Column="0" Grid.Row="1" Text="{Binding Path=Filename}" HorizontalAlignment="Right" Width="80" Height="40" Margin="0 0 20 50"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Width="80" Height="40" Margin="0 160 300 50"/>
+        <Image Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Width="20" Height="50">
+            
+        </Image>
+        <Button Command="{Binding AddCommand}" Name="btn1" Grid.Column="1" Grid.Row="1" Content="Add" Width="100" Height="50" Margin="0 150 200 0"  />
+        <Button Command="{Binding RemoveComand}" CommandParameter="{Binding SelectedPhoto}" Name="btn2" Grid.Column="1" Grid.Row="1" Content="Delete" Width="100" Height="50" Margin="70 150 0 0"   />
+    </Grid>
+</Window>
